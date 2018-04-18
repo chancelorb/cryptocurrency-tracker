@@ -1,0 +1,23 @@
+{
+  "name": "cryptocurrency-tracker",
+  "version": "1.0.0",
+  "description": "track your coins together with news and meetups",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chancelorb/cryptocurrency-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chancelorb/cryptocurrency-tracker/issues"
+  },
+  "homepage": "https://github.com/chancelorb/cryptocurrency-tracker#readme",
+  "dependencies": {
+    "cryptocompare": "^0.5.0",
+    "node-fetch": "^2.1.2"
+  }
+}
