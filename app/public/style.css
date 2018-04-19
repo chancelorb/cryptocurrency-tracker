@@ -1,0 +1,54 @@
+.header {
+  display: inline-block;
+  background-color: #666;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin: -10px;
+}
+
+.header-log {
+  margin-left: 20px;
+  color: #fff;
+  float: right;
+}
+
+.header-reg {
+  color: #fff;
+  float: right;
+}
+.header-img {
+  width: 50px;
+  height: 50px;
+
+}
+.crypto-top {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  background-color: #169;
+}
+
+.meet-top {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  background-color: #289;
+}
+
+.news-top {
+  display: inline-block;
+  height: 400px;
+  width: 100%;
+  background-color: #adf;
+}
+.footer {
+  display: inline-block;
+  background-color: #666;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  text-align: center;
+}
