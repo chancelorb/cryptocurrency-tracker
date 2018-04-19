@@ -16,7 +16,10 @@ function q1() {
       return data.json();
     })
     .then (data => {
-      console.log(data)
+      data.forEach((naam) => {
+        console.log(`${naam.id}, ${naam.percent_change_24h}`)
+      })
+
     })
     .catch(err => {
       console.log(err)
