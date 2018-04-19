@@ -1,11 +1,3 @@
-// global.fetch = require('node-fetch');
-// const cc = require('cryptocompare');
-//
-//
-// cc.coinList().then(data => {
-//   console.log(data)
-// })
-// not good for use changed to coinmarketcap api!!!!!
 
 
 const fetch = require('node-fetch');
