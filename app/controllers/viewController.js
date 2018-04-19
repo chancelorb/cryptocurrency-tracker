@@ -4,8 +4,15 @@ function registerPage(req, res) {
 function loginPage(req, res) {
   res.render('login');
 }
+function sendOne (req, res) {
+  res.render('show', {
+    coin: res.locals.data
+
+  })
+}
 
 module.exports = {
   registerPage,
-  loginPage
+  loginPage,
+  sendOne
 }

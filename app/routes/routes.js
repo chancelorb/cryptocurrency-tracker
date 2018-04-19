@@ -14,8 +14,8 @@ function sendError(err, req, res, next) {
 homeRouter.route('/')
   .get(coinApiF.getTop, sendError);
 
-// homeRouter.route('/:id')
-//   .get(controlF.getOne, controlV.sendOne, sendError);
+homeRouter.route('/:id')
+  .get(controlF.getOne, controlV.sendOne, sendError);
 
 homeRouter.route('/register')
   .get(controlV.registerPage);

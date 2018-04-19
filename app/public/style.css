@@ -77,3 +77,12 @@
 .neg-change {
   color: red;
 }
+.form-container {
+  display: inline-block;
+}
+form {
+  left: 0;
+  right: 0;
+  
+
+}

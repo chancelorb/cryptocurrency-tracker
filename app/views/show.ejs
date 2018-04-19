@@ -1,13 +1,27 @@
 <% include partials/boilerplate %>
 
-<h1>coins id</h1>
+<h1><%= coin[0].id %></h1>
   <div class="coin-field">
-    <h1><%= coins.name %></h1>
-    <p>Last Hour: <%= coin.percent_change_1h %>%</p>
-    <p>Past 24h: <%= coin.percent_change_24h %>%</p>
-    <p>Past 7 Days: <%= coin.percent_change_7d %>%</p>
-    <p>Price USD: $<%= coin.price_usd %></p>
+    <% if ( coin[0].percent_change_1h > 0) { %>
+        <p>Last Hour: <span class="pos-change"><%= coin[0].percent_change_1h %>%</span></p>
+    <% } else { %>
+      <p>Last Hour: <span class="neg-change"><%= coin[0].percent_change_1h %>%</span></p>
+
+    <% }%>
+    <% if ( coin[0].percent_change_24h > 0) { %>
+        <p>Last 24h: <span class="pos-change"><%= coin[0].percent_change_24h %>%</span></p>
+    <% } else { %>
+      <p>Last 24h: <span class="neg-change"><%= coin[0].percent_change_24h %>%</span></p>
+
+    <% }%>
+    <% if ( coin[0].percent_change_7d > 0) { %>
+        <p>Last 7d: <span class="pos-change"><%= coin[0].percent_change_7d %>%</span></p>
+    <% } else { %>
+      <p>Last 7d: <span class="neg-change"><%= coin[0].percent_change_7d %>%</span></p>
+
+    <% }%>
+    <p>Price USD: $<%= coin[0].price_usd %></p>
   </div>
 
 
-<% include partials/boilerplate %>
+<% include partials/end %>
