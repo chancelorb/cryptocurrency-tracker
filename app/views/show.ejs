@@ -1,0 +1,13 @@
+<% include partials/boilerplate %>
+
+<h1>coins id</h1>
+  <div class="coin-field">
+    <h1><%= coins.name %></h1>
+    <p>Last Hour: <%= coin.percent_change_1h %>%</p>
+    <p>Past 24h: <%= coin.percent_change_24h %>%</p>
+    <p>Past 7 Days: <%= coin.percent_change_7d %>%</p>
+    <p>Price USD: $<%= coin.price_usd %></p>
+  </div>
+
+
+<% include partials/boilerplate %>

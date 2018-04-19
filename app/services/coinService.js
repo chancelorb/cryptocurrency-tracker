@@ -9,6 +9,16 @@ function getTopF() {
   return queryP;
 }
 
+// function getTopF(id) {
+//   const queryP = fetch(` https://api.coinmarketcap.com/v1/ticker/ $1`)
+//     .then(data => {
+//       return data.json();
+//
+//     })
+//   return queryP;
+// }
+
+
 module.exports = {
   getTopF
 }

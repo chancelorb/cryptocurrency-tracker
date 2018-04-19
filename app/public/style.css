@@ -51,6 +51,7 @@
   margin-bottom: -10px;
   margin-left: -10px;
   text-align: center;
+  margin-top: 10px;
 }
 .div-title {
   text-align: center;
@@ -59,15 +60,20 @@
 .coin-field {
   display: inline-block;
   background-color: #D8AE48;
-  width: 15%;
+  width: 18%;
   text-align: center;
   margin: 10px;
-  padding: 10px;
-  border: 10px solid black;
-  border-radius: 10%;
+  padding: auto;
+  border: 2px solid #fff;
 }
 .coin-container {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 99%;
+}
+.pos-change {
+  color: green;
+}
+.neg-change {
+  color: red;
 }
