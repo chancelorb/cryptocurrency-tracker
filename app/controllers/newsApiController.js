@@ -1,9 +1,9 @@
-const servR = require('../services/coinService');
+const servRN = require('../services/redditService');
 
-function getTop(req, res, next) {
-  servR.getTopF()
-    .then(coin => {
-      res.locals.coins = coin
+function getTopN(req, res, next) {
+  servRN.getTopFN()
+    .then(data => {
+      res.locals.news = data
       next()
     })
     .catch(err => {
@@ -21,6 +21,6 @@ function getTop(req, res, next) {
 
 
 module.exports = {
-  getTop,
+  getTopN,
 
 }

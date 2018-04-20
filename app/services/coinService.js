@@ -9,7 +9,6 @@ function getTopF() {
 }
 
 function getOneC(id) {
-  console.log(id)
   const queryP = fetch(` https://api.coinmarketcap.com/v1/ticker/${id}`)
     .then(data => {
 

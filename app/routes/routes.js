@@ -1,5 +1,6 @@
 const homeRouter = require('express').Router()
 const coinApiF = require('../controllers/coinApiController')
+const newsApiF = require('../controllers/newsApiController')
 const controlV = require('../controllers/viewController')
 const controlF = require('../controllers/controller')
 
@@ -12,10 +13,7 @@ function sendError(err, req, res, next) {
 }
 
 homeRouter.route('/')
-  .get(coinApiF.getTop, sendError);
-
-homeRouter.route('/:id')
-  .get(controlF.getOne, controlV.sendOne, sendError);
+  .get(coinApiF.getTop, newsApiF.getTopN,controlV.homePage, sendError);
 
 homeRouter.route('/register')
   .get(controlV.registerPage);
@@ -23,5 +21,7 @@ homeRouter.route('/register')
 homeRouter.route('/login')
   .get(controlV.loginPage);
 
+homeRouter.route('/:id')
+  .get(controlF.getOne, controlV.sendOne, sendError);
 
 module.exports = homeRouter;

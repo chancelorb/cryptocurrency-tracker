@@ -1,27 +1,32 @@
 <% include partials/boilerplate %>
+  <div class="info-field">
 
-<h1><%= coin[0].id %></h1>
-  <div class="coin-field">
-    <% if ( coin[0].percent_change_1h > 0) { %>
-        <p>Last Hour: <span class="pos-change"><%= coin[0].percent_change_1h %>%</span></p>
-    <% } else { %>
-      <p>Last Hour: <span class="neg-change"><%= coin[0].percent_change_1h %>%</span></p>
+    <div class="coin-field-id">
+      <h1><%= coin[0].id %>, <%= coin[0].symbol %></h1>
+      <p>Rank: <%= coin[0].rank %></p>
+      <hr>
 
-    <% }%>
-    <% if ( coin[0].percent_change_24h > 0) { %>
-        <p>Last 24h: <span class="pos-change"><%= coin[0].percent_change_24h %>%</span></p>
-    <% } else { %>
-      <p>Last 24h: <span class="neg-change"><%= coin[0].percent_change_24h %>%</span></p>
+      <% if ( coin[0].percent_change_1h > 0) { %>
+          <p>Last Hour: <span class="pos-change"><%= coin[0].percent_change_1h %>%</span></p>
+      <% } else { %>
+        <p>Last Hour: <span class="neg-change"><%= coin[0].percent_change_1h %>%</span></p>
 
-    <% }%>
-    <% if ( coin[0].percent_change_7d > 0) { %>
-        <p>Last 7d: <span class="pos-change"><%= coin[0].percent_change_7d %>%</span></p>
-    <% } else { %>
-      <p>Last 7d: <span class="neg-change"><%= coin[0].percent_change_7d %>%</span></p>
+      <% }%>
+      <% if ( coin[0].percent_change_24h > 0) { %>
+          <p>Last 24h: <span class="pos-change"><%= coin[0].percent_change_24h %>%</span></p>
+      <% } else { %>
+        <p>Last 24h: <span class="neg-change"><%= coin[0].percent_change_24h %>%</span></p>
 
-    <% }%>
-    <p>Price USD: $<%= coin[0].price_usd %></p>
+      <% }%>
+      <% if ( coin[0].percent_change_7d > 0) { %>
+          <p>Last 7d: <span class="pos-change"><%= coin[0].percent_change_7d %>%</span></p>
+      <% } else { %>
+        <p>Last 7d: <span class="neg-change"><%= coin[0].percent_change_7d %>%</span></p>
+
+      <% }%>
+      <p>Price USD: $<%= coin[0].price_usd %></p>
+
+    </div>
   </div>
-
 
 <% include partials/end %>

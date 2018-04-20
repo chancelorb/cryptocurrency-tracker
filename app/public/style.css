@@ -83,6 +83,28 @@
 form {
   left: 0;
   right: 0;
-  
+}
 
+.info-field {
+  width: 95%;
+  margin: 0 auto;
+
+}
+.coin-field-id {
+  display: inline-block;
+  background-color: #D8AE48;
+  width: 18%;
+  text-align: center;
+  margin: 10px;
+  padding: auto;
+  border: 2px solid #fff;
+}
+.news-img {
+  width: auto;
+  height: auto;
+  padding-top: 10px;
+}
+.news-title {
+  color: #fff;
+  font-size: 15px;
 }
