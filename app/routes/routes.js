@@ -22,6 +22,6 @@ homeRouter.route('/login')
   .get(controlV.loginPage);
 
 homeRouter.route('/:id')
-  .get(controlF.getOne, controlV.sendOne, sendError);
+  .get(controlF.getOne, newsApiF.getOne, controlV.sendOne, sendError);
 
 module.exports = homeRouter;

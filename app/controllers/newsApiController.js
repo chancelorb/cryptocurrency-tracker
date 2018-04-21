@@ -12,15 +12,19 @@ function getTopN(req, res, next) {
 }
 
 
-// .then (data => {
-//   data.forEach((naam) => {
-//     console.log(`${naam.id}, ${naam.percent_change_24h}`)
-//   })
-//
-// })
+function getOne(req, res, next) {// busy making the id and reddit conection
+  servRN.getOneN(req.params.id)
+    .then(coinN => {
+      res.locals.coinN = coinN
+      next();
+    })
+    .catch(err => {
+      next(err)
+    })
+}
 
 
 module.exports = {
   getTopN,
-
+  getOne
 }

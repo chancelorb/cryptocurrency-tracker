@@ -12,12 +12,7 @@ function getTop(req, res, next) {
 }
 
 
-// .then (data => {
-//   data.forEach((naam) => {
-//     console.log(`${naam.id}, ${naam.percent_change_24h}`)
-//   })
-//
-// })
+
 
 
 module.exports = {

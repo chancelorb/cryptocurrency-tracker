@@ -27,6 +27,20 @@
       <p>Price USD: $<%= coin[0].price_usd %></p>
 
     </div>
+    <hr>
+    <div class="news-top">
+      <h1 class="div-title"><%= (coin[0].id).toUpperCase() %> ON REDDIT</h1>
+      <div class="coin-container">
+        <% for (let i = 0; i < 5 ; i++) { %>
+          <a href="https://www.reddit.com<%= ((coinN.data.children[i]).data.permalink) %>">
+            <div class="coin-field">
+              <img class="news-img" src="<%= (coinN.data.children[i]).data.thumbnail %>" alt="NO PIC!">
+              <p class="news-title"><%= (coinN.data.children[i]).data.title %></p>
+            </div>
+          </a>
+        <% } %>
+      </div>
+    </div>
   </div>
 
 <% include partials/end %>

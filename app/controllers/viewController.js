@@ -6,7 +6,8 @@ function loginPage(req, res) {
 }
 function sendOne (req, res) {
   res.render('show', {
-    coin: res.locals.data
+    coin: res.locals.data,
+    coinN: res.locals.coinN
   })
 }
 function homePage(req, res) {
