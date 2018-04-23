@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 
 const session = require('express-session')
 
-const authService  = require('./user/auth/AuthService');
+const authService  = require('./user/auth/authService');
 const authRouter   = require('./user/auth/AuthRouter');
 const homeRouter = require('./routes/routes')
 
