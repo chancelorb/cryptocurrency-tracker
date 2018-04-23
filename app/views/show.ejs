@@ -2,7 +2,11 @@
   <div class="info-field">
 
     <div class="coin-field-id">
-      <h1><%= coin[0].id %>, <%= coin[0].symbol %></h1>
+      <% if ((coin[0].id).length > 0 { %>
+      <h1>
+
+        <%= coin[0].id %>, <%= coin[0].symbol %>
+      </h1>
       <p>Rank: <%= coin[0].rank %></p>
       <hr>
 
@@ -25,7 +29,7 @@
 
       <% }%>
       <p>Price USD: $<%= coin[0].price_usd %></p>
-
+      <% }); %>
     </div>
     <hr>
     <div class="news-top">
