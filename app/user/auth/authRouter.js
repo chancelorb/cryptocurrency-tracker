@@ -1,7 +1,7 @@
 const authRouter     = require('express').Router();
-const AuthService    = require('./AuthService');
-const ViewController = require('../UserViewController');
-const UserController = require('../UserController');
+const AuthService    = require('./authService');
+const ViewController = require('../userViewController');
+const UserController = require('../userController');
 const controlV = require('../../controllers/viewController')
 
 authRouter.route('/login')
