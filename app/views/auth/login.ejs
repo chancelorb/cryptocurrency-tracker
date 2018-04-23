@@ -1,0 +1,16 @@
+<% include ../partials/boilerplate %>
+  <div class="form-container">
+  <h1>Login Page</h1>
+    <form action="/auth/login" method="POST">
+      <labal>
+        <h3>username</h3>
+        <input type="text" name="username" >
+      </labal>
+      <labal>
+        <h3>password</h3>
+        <input type="password" name="password" >
+      </labal>
+      <button type="submit">LOG IN</button>
+    </form>
+  </div>
+<% include ../partials/end %>

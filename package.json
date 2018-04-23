@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/chancelorb/cryptocurrency-tracker#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "morgan": "^1.9.0",
     "node-fetch": "^2.1.2",
     "nodemon": "^1.17.3",

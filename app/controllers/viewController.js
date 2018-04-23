@@ -1,8 +1,8 @@
 function registerPage(req, res) {
-  res.render('register');
+  res.render('auth/register');
 }
 function loginPage(req, res) {
-  res.render('login');
+  res.render('auth/login');
 }
 function sendOne (req, res) {
   res.render('show', {
