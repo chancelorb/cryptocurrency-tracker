@@ -11,6 +11,7 @@ module.exports = {
   },
 
   create(req, res, next) {
+    console.log(req.body.password)
     bcrypt.hash(req.body.password, 11)
       .then(pwdHash => User.save({
         username:        req.body.username,

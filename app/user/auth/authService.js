@@ -23,7 +23,7 @@ module.exports = {
 
         // we should have a good password, set the user into the session
         req.session.user = user;
-
+        console.log(req.session.user)
         // call the next handler
         next();
       })
@@ -46,8 +46,11 @@ module.exports = {
    */
 
   loginRequired(req, res, next) {
+
+
     if (!req.session.user) {
-      res.sendStatus(401);
+
+      res.redirect('/');
     } else {
       next();
     }

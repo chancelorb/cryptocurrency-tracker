@@ -1,5 +1,10 @@
 module.exports = process.env.DATABASE_url || {
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || 5432,
-  database: process.env.DB_NAME || 'cryptoApp'
+  host:  'localhost',
+  port:  5432,
+  database:  'cryptoApp'
 }
+
+
+// process.env.DB_HOST
+// process.env.DB_PORT
+// process.env.DB_NAME

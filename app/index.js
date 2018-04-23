@@ -14,16 +14,16 @@ const homeRouter = require('./routes/routes')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// app.set('superSecret', process.env.SECRET);
-// app.set('view engine', 'ejs');
+app.set('superSecret', process.env.SERVER_SECRET);
+app.set('view engine', 'ejs');
 
 // some logging
-//
-// app.use(session( {
-//     secret:             app.get('superSecret'),
-//     resave:             false,
-//     saveUninitialized:  false,
-// }));
+
+app.use(session( {
+    secret:             'superSecret',
+    resave:             false,
+    saveUninitialized:  false,
+}));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -33,10 +33,12 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-//this is a private route
-// app.get('/myHome', authService, (req, res) => {
-//   res.json(req.session.user);
-// });
+// this is a private route
+app.get('/myHome', authService.loginRequired, (req, res) => {
+  res.render('myHome', {
+    info: req.session.user
+  });
+});
 
 //route handler
 app.use('/auth', authRouter);

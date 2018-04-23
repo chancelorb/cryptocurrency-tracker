@@ -5,15 +5,12 @@ const UserController = require('../UserController');
 const controlV = require('../../controllers/viewController')
 
 authRouter.route('/login')
-  .get(controlV.loginPage);
-  // .get(ViewController.showLoginForm)
-  // .post(AuthService.login, ViewController.handleCreateUser);
+  .get(controlV.loginPage)
+  .post(AuthService.login, ViewController.handleCreateUser);
 
 authRouter.route('/register')
-  .get(controlV.registerPage);
-  // .post(usercontroller.create, AuthService.login, controlV.handleCreateUser)
-  // .get(ViewController.showRegisterForm)
-  // .post(UserController.create, AuthService.login, ViewController.handleCreateUser);
+  .get(controlV.registerPage)
+  .post(UserController.create, AuthService.login, ViewController.handleCreateUser);
 
 authRouter.get('/logout', AuthService.logout, ViewController.handleLogout);
 

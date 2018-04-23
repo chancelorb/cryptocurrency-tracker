@@ -34,13 +34,13 @@ module.exports = {
   //   `);
   // },
   //
-  // findOne(username) {
-  //   return db.one(`
-  //     SELECT *
-  //       FROM users
-  //      WHERE username = $1
-  //   `, username);
-  // },
+  findOne(username) {
+    return db.one(`
+      SELECT *
+        FROM users
+       WHERE username = $1
+    `, username);
+  },
 
 
   // /**
@@ -61,17 +61,15 @@ module.exports = {
   save(user) {
     return db.one(`
       INSERT INTO users (
-        username, password_digest, email, firstname, lastname
+        username, password_digest, email
       ) VALUES (
-        $/username/, $/password_digest/, $/email/, $/firstname/, $/lastname/
+        $/username/, $/password_digest/, $/email/
       )
       ON CONFLICT (username) DO UPDATE
       SET
         username        = $/username/,
         password_digest = $/password_digest/,
-        email           = $/email/,
-        firstname       = $/firstname/,
-        lastname        = $/lastname/
+        email           = $/email/
       RETURNING *
     `, user);
   },

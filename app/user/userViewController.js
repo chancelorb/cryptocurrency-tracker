@@ -9,12 +9,13 @@ module.exports = {
   },
 
   handleCreateUser(req, res) {
+    console.log(req.session.user)
     res.redirect('/myHome');
   },
   handleLogout(req, res) {
     res.redirect('/');
   },
-  handleDelete(req, res) {
-    res.redirect('/quotes');
-  },
+  // handleDelete(req, res) {
+  //   res.redirect('/quotes');
+  // },
 };
