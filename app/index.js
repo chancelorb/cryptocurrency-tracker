@@ -14,7 +14,7 @@ const homeRouter = require('./routes/routes')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.set('superSecret', process.env.SERVER_SECRET);
+app.set('superSecret', 'chance'); //test with string
 app.set('view engine', 'ejs');
 
 // some logging
