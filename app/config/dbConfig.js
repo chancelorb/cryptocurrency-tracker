@@ -1,4 +1,4 @@
-module.exports = process.env.DATABASE_url || {
+module.exports =  {
   host:  'localhost',
   port:  5432,
   database:  'cryptoApp'
