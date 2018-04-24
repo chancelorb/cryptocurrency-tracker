@@ -2,10 +2,7 @@ const bcrypt = require('bcrypt');
 const User   = require('../model/user');
 
 module.exports = {
-  /**
-   * @func login
-   * @desc compares the cleartext password with the hashed version in the DB
-   */
+
   login(req, res, next) {
     const { username, password } = req.body;
 
@@ -30,10 +27,7 @@ module.exports = {
       .catch(err => next(err));
   },
 
-  /**
-   * @func logout
-   * @description destroys a user's session; logs a user out;
-   */
+
   logout(req, res, next) {
     // destroy session
     // next will be called with either an error or undefined.

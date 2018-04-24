@@ -12,7 +12,8 @@ The app is an easy tool to keep track of your favorite cryptocurrencies together
 
 ## Wireframes
 
-![Wireframes](images/IMG_0217.JPG?raw=true "Wireframes")
+![Wireframes](images/IMG_0227.JPG?raw=true "Wireframes")
+![Wireframes](images/IMG_0228.JPG?raw=true "Wireframes")
 
 
 
@@ -36,9 +37,27 @@ if change is negative price in red otherwise green.
  - reddit
 
 ## Code Snippet
-desc
+Here I write js in ejs.
 ```
+<% if ( coin[0].percent_change_1h > 0) { %>
+    <p>Last Hour: <span class="pos-change"><%= coin[0].percent_change_1h %>%</span></p>
+<% } else { %>
+  <p>Last Hour: <span class="neg-change"><%= coin[0].percent_change_1h %>%</span></p>
 
+<% }%>
+<% if ( coin[0].percent_change_24h > 0) { %>
+    <p>Last 24h: <span class="pos-change"><%= coin[0].percent_change_24h %>%</span></p>
+<% } else { %>
+  <p>Last 24h: <span class="neg-change"><%= coin[0].percent_change_24h %>%</span></p>
+
+<% }%>
+<% if ( coin[0].percent_change_7d > 0) { %>
+    <p>Last 7d: <span class="pos-change"><%= coin[0].percent_change_7d %>%</span></p>
+<% } else { %>
+  <p>Last 7d: <span class="neg-change"><%= coin[0].percent_change_7d %>%</span></p>
+
+<% }%>
+<p>Price USD: $<%= coin[0].price_usd %></p>
 ```
 
 
