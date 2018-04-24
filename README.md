@@ -12,8 +12,8 @@ The app is an easy tool to keep track of your favorite cryptocurrencies together
 
 ## Wireframes
 
-![Wireframes](images/IMG_0227.JPG?raw=true "Wireframes")
-![Wireframes](images/IMG_0228.JPG?raw=true "Wireframes")
+![Wireframes](app/images/IMG_0227.JPG?raw=true "Wireframes")
+![Wireframes](app/images/IMG_0228.JPG?raw=true "Wireframes")
 
 
 

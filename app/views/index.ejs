@@ -39,7 +39,7 @@
     <h1 class="div-title">CRYPTO NEWS ON REDDIT</h1>
     <div class="coin-container">
       <% for (let i = 0; i < 5 ; i++) { %>
-      <% console.log((news.data.children[i]).data.permalink) %>
+      
         <a href="https://www.reddit.com<%= ((news.data.children[i]).data.permalink) %>">
           <div class="coin-field">
             <img class="news-img" src="<%= (news.data.children[i]).data.thumbnail %>" alt="NO PIC!">
