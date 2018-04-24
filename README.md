@@ -66,3 +66,9 @@ Here I write js in ejs.
  None.
 
 ## Issues and Resolutions
+When I want to deploy on heroku the error keeps giving me an undefined error here :
+```
+<%= coin[0].id %>, <%= coin[0].symbol %>
+```
+(views/show.ejs)
+This variable is only defined when used, I havn't found a solution yet
